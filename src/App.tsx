@@ -1,18 +1,28 @@
-// src/App.tsx
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // Import Routes instead of Switch
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
-import Gallery from './pages/Gallery';
+import Paintings from './pages/Paintings';
 import Navbar from './components/Navbar';
+import Photography from './pages/Photography';
+import Arhitecture from './pages/Arhitecture';
+import Videography from './pages/Videography';
+import Contact from './pages/Contact';
+import BaseContainer from './components/BaseContainer';
 
-const App: React.FC = () => {
+const App = () => {
   return (
     <Router basename='/art-portfolio'>
-      <Navbar />
-      <Routes>
-        <Route path='/' element={<Home />} /> {/* Home page */}
-        <Route path='/gallery' element={<Gallery />} /> {/* Gallery page */}
-      </Routes>
+      <BaseContainer>
+        <Navbar />
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/painting' element={<Paintings />} />
+          <Route path='/photography' element={<Photography />} />
+          <Route path='/arhitecture' element={<Arhitecture />} />
+          <Route path='/videography' element={<Videography />} />
+          <Route path='/contact' element={<Contact />} />
+        </Routes>
+      </BaseContainer>
     </Router>
   );
 };
