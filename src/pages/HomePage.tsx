@@ -4,12 +4,18 @@ import 'swiper/css';
 import 'swiper/css/effect-fade';
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import styled from '@emotion/styled';
-import TextContent from '../components/TextContent';
+import TextLinesDisplay from '../components/TextLinesDisplay';
 
 const swiperImgs: string[] = [
   '/images/painting1.1.jpeg',
   '/images/painting2.1.jpeg',
   '/images/painting3.1.jpeg',
+];
+
+const textLines = [
+  'Welcome to the portfolio of an amazing artist.',
+  'Explore different categories of artwork, such as paintings, photography, and more.',
+  'Each piece reflects unique artistic vision and creativity.',
 ];
 
 const PageSection = styled.div`
@@ -54,7 +60,7 @@ const StyledImage = styled.img`
   object-position: center;
 `;
 
-const Home = () => {
+const HomePage = () => {
   return (
     <PageSection>
       <SliderWrapper>
@@ -77,9 +83,9 @@ const Home = () => {
           ))}
         </Swiper>
       </SliderWrapper>
-      <TextContent />
+      <TextLinesDisplay mainLine='' textLines={textLines} />
     </PageSection>
   );
 };
 
-export default Home;
+export default HomePage;

@@ -1,28 +1,28 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Home from './pages/Home';
-import Paintings from './pages/Paintings';
+import HomePage from './pages/HomePage';
+import PaintingsPage from './pages/PaintingsPage';
 import Navbar from './components/Navbar';
-import Photography from './pages/Photography';
-import Arhitecture from './pages/Arhitecture';
-import Videography from './pages/Videography';
-import Contact from './pages/Contact';
-import BaseContainer from './components/BaseContainer';
+import PhotographyPage from './pages/PhotographyPage';
+import ArhitecturePage from './pages/ArhitecturePage';
+import VideographyPage from './pages/VideographyPage';
+import ContactPage from './pages/ContactPage';
+import BaseContainerLayout from './components/BaseContainerLayout';
 
 const App = () => {
   return (
     <Router basename='/art-portfolio'>
-      <BaseContainer>
+      <BaseContainerLayout>
         <Navbar />
         <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/painting' element={<Paintings />} />
-          <Route path='/photography' element={<Photography />} />
-          <Route path='/arhitecture' element={<Arhitecture />} />
-          <Route path='/videography' element={<Videography />} />
-          <Route path='/contact' element={<Contact />} />
+          <Route path='/' element={<HomePage />} />
+          <Route path='/painting' element={<PaintingsPage />} />
+          <Route path='/photography' element={<PhotographyPage />} />
+          <Route path='/arhitecture' element={<ArhitecturePage />} />
+          <Route path='/videography' element={<VideographyPage />} />
+          <Route path='/contact' element={<ContactPage />} />
         </Routes>
-      </BaseContainer>
+      </BaseContainerLayout>
     </Router>
   );
 };

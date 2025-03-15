@@ -22,7 +22,7 @@ const ContentContainer = styled.div`
   padding: 20px 0px;
 `;
 
-const BaseContainer: React.FC<{ children: React.ReactNode }> = ({
+const BaseContainerLayout: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
   return (
@@ -33,4 +33,4 @@ const BaseContainer: React.FC<{ children: React.ReactNode }> = ({
   );
 };
 
-export default BaseContainer;
+export default BaseContainerLayout;
