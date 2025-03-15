@@ -7,7 +7,7 @@ import Navbar from './components/Navbar';
 
 const App: React.FC = () => {
   return (
-    <Router>
+    <Router basename='/art-portfolio'>
       <Navbar />
       <Routes>
         <Route path='/' element={<Home />} /> {/* Home page */}
