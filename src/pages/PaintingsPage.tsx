@@ -2,6 +2,7 @@ import GaleryGridDisplay, {
   PaintingDataProps,
 } from '../components/GaleryGridDisplay';
 import TextLinesDisplay from '../components/TextLinesDisplay';
+import useSupabaseImages from '../data/SupabaseImages';
 
 const paintingsData: PaintingDataProps[] = [
   {
@@ -36,6 +37,9 @@ const textLines: string[] = [
 ];
 
 const PaintingsPage = () => {
+  // const { images, loading } = useSupabaseImages('paintings');
+  // console.log(images);
+
   return (
     <>
       <TextLinesDisplay mainLine='Painting' textLines={textLines} />

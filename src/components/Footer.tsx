@@ -34,6 +34,8 @@ const Footer = () => {
   const Copywrite = styled.div`
     padding: 0px 20px;
     cursor: default;
+    font-size: 12px;
+    letter-spacing: 0.1em;
   `;
 
   return (

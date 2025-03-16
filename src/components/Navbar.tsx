@@ -25,7 +25,7 @@ const FirstNavLink = styled(Link)`
   curson: pointer;
   text-decoration: none;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.01em;
   color: black;
 `;
 
@@ -58,10 +58,10 @@ const Navbar = () => {
       <NavLinks>
         <FirstNavLink to='/'>Zaid Haddad</FirstNavLink>
         <NavLink to='/painting'>Painting</NavLink>
-        <NavLink to='/arhitecture'>Arhitecture</NavLink>
+        <NavLink to='/architecture'>Architecture</NavLink>
         <NavLink to='/photography'>Photography</NavLink>
         <NavLink to='/videography'>Videography</NavLink>
-        <NavLink to='/contact'>Bio</NavLink>
+        <NavLink to='/about'>Bio</NavLink>
       </NavLinks>
     </NavbarContainer>
   );
